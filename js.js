@@ -43,8 +43,11 @@ var create_card = function(name, preview, json) {
     div.name = name;
     var a_1 = document.createElement("a");
     var img = document.createElement("img");
-    img.src = preview;
+    // img.src = preview;
+    img.src = "https://cdn.jsdelivr.net/gh/evrstr/img/blog_evrstr/loading.gif";
+    img.dataset.src = preview;
     img.alt = name;
+    img.className = "card_img"
     a_1.appendChild(img);
     div.appendChild(a_1);
 
@@ -65,9 +68,55 @@ var create_card = function(name, preview, json) {
     div.appendChild(div2)
 
     content.appendChild(div);
+    checkImgs();
     h2.onclick = function() {
         defaultConfig.model.jsonPath = "https://cdn.jsdelivr.net/gh/evrstr/live2d-widget-models/live2d_evrstr/" + name + "/model.json";
         L2Dwidget.init(defaultConfig);
+    }
+
+}
+
+
+
+function isInSight(el) {
+    const bound = el.getBoundingClientRect();
+    const clientHeight = window.innerHeight;
+    //如果只考虑向下滚动加载
+    //const clientWidth = window.innerWeight;
+    return bound.top <= clientHeight + 70;
+}
+
+function checkImgs() {
+    const imgs = document.querySelectorAll('.card_img');
+    Array.from(imgs).forEach(el => {
+        if (isInSight(el)) {
+            loadImg(el);
+        }
+    })
+}
+
+function loadImg(el) {
+    if (el.src == "https://cdn.jsdelivr.net/gh/evrstr/img/blog_evrstr/loading.gif") {
+        const source = el.dataset.src;
+        el.src = source;
+    }
+}
+
+function throttle(fn, mustRun = 500) {
+    const timer = null;
+    let previous = null;
+    return function() {
+        const now = new Date();
+        const context = this;
+        const args = arguments;
+        if (!previous) {
+            previous = now;
+        }
+        const remaining = now - previous;
+        if (mustRun && remaining >= mustRun) {
+            fn.apply(context, args);
+            previous = now;
+        }
     }
 }
 
@@ -79,28 +128,24 @@ var getdat = function() {
     request.open("GET", url);
     request.send(null);
     request.onload = function() {
-            if (request.status == 200) {
-                json_dat = JSON.parse(request.responseText);
+        if (request.status == 200) {
+            json_dat = JSON.parse(request.responseText);
 
 
-                for (let index = 0; index < json_dat.length; index++) {
-                    // console.log(json_dat[index]);
-                    var content = document.getElementById("content");
-                    var div = document.createElement("div");
-                    content.appendChild(div);
-                    create_card(json_dat[index].name, json_dat[index].preview, json_dat[index].json)
+            for (let index = 0; index < json_dat.length; index++) {
+                // console.log(json_dat[index]);
+                var content = document.getElementById("content");
+                var div = document.createElement("div");
+                content.appendChild(div);
+                create_card(json_dat[index].name, json_dat[index].preview, json_dat[index].json)
 
-                }
             }
         }
-        // return json_dat;
+    }
+    window.onscroll = throttle(checkImgs);
 }
 
-
 getdat();
-
-
-
 
 
 

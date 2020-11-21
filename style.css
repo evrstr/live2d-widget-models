@@ -98,6 +98,7 @@ body {
 }
 
 .content .card a img {
+    display: block;
     width: 250px;
     height: 250px;
 }
