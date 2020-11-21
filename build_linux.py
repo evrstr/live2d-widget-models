@@ -22,8 +22,8 @@ def my_rename():
             for itemone in item1:
                 pathres = os.path.join(path, itemone)
                 if os.path.isfile(pathres) and pathres.endswith('.png') and (not (pathres.endswith('.pil.png'))):
-                    path_name = path.split('\\')[-1]
-                    now_name = path + '\\' + path_name + '.png'
+                    path_name = path.split('/')[-1]
+                    now_name = path + '/' + path_name + '.png'
                     preview = 'https://cdn.jsdelivr.net/gh/evrstr/live2d-widget-models/live2d_evrstr/' + \
                         path_name + '/' + path_name + '.pil.png'
                     json_src = 'https://cdn.jsdelivr.net/gh/evrstr/live2d-widget-models/live2d_evrstr/' + \
