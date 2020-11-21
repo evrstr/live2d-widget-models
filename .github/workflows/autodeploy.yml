@@ -1,0 +1,32 @@
+name: Python application
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 检查分支
+      - uses: actions/checkout@v2
+
+      - name: 安装 Python 3.7
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.7
+
+      - name: Update paper list
+        run: |
+          export TZ='Asia/Shanghai'
+          python build.py
+
+      - name: commit
+        run: |
+          git config --global user.name 'evrstr'
+          git config --global user.email '429427989@qq.com'
+          export TZ='Asia/Shanghai'
+          git add .
+          git commit -m "update" -a
+
+      - name: Push changes
+        uses: ad-m/github-push-action@master
