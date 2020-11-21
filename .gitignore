@@ -1,7 +1,6 @@
 .DS_Store
 *.log
 live2d-model-pre/
-img/
 live2D/
 live2dModel/
 test*
