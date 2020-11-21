@@ -3,8 +3,8 @@ name: 自动部署
 
 on:
   push:
-  branches:
-    - master
+    branches:
+      - master
 
   release:
     types:
