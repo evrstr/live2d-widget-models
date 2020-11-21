@@ -120,8 +120,6 @@ function throttle(fn, mustRun = 500) {
     }
 }
 
-
-
 var getdat = function() {
     var url = "dat.json";
     var request = new XMLHttpRequest();
@@ -146,16 +144,6 @@ var getdat = function() {
 }
 
 getdat();
-
-
-
-// var btn = document.getElementById('22');
-// btn.onclick = function() {
-//     defaultConfig.model.jsonPath = "https://cdn.jsdelivr.net/gh/evrstr/live2d-widget-models/live2d_evrstr/22/model.json";
-//     L2Dwidget.init(defaultConfig);
-// }
-
-
 
 // L2Dwidget.init({
 //     "pluginRootPath": "live2dw/",
