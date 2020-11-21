@@ -1,0 +1,15 @@
+{
+	"version":"Sample 1.0.0",
+	"model":"nepgear.moc",
+	"layout": {
+		"width": 3,
+		"center_x": 0,
+		"center_y": -0.5
+	},
+	"textures":[
+		"nepgear.1024/texture_00.png",
+		"nepgear.1024/texture_01.png",
+		"nepgear.1024/texture_02.png",
+		"nepgear.1024/texture_03.png"
+	]
+}

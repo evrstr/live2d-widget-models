@@ -1,0 +1,83 @@
+{
+	"version":"Sample 1.0.0",
+	"model":"miku.moc",
+	"textures":[
+		"miku2048/texture_00.png"
+	],
+	"physics":"json/physics.json",
+	"pose":"json/pose.json",
+	"layout":
+	{
+		"width":3.119,
+		"center_x":-0.0222,
+		"center_y":-0.1583
+	},
+	"hit_areas":
+	[
+		{"name":"head", "id":"D_REF.PT_HEAD"},
+		{"name":"body", "id":"D_REF.PT_BODY"}
+	],
+
+	"motions":
+	{
+		"idle":
+		[
+			{"file":"mtn/Miku_live2D_idle.mtn"}
+		],
+        "start":
+		[
+			{ "file":"mtn/Miku_live2D_03.mtn", "sound": "voice/03.mp3", "msg_id":"3" },
+			{ "file":"mtn/Miku_live2D_26.mtn", "sound": "voice/26.mp3", "msg_id":"26" }
+		],
+		"tap_head":
+		[
+			{ "file":"mtn/Miku_live2D_01.mtn", "sound": "voice/01.mp3", "msg_id":"1" },
+			{ "file":"mtn/Miku_live2D_02.mtn", "sound": "voice/02.mp3", "msg_id":"2" },
+			{ "file":"mtn/Miku_live2D_03.mtn", "sound": "voice/03.mp3", "msg_id":"3" },
+			{ "file":"mtn/Miku_live2D_04.mtn", "sound": "voice/04.mp3", "msg_id":"4" },
+			{ "file":"mtn/Miku_live2D_05.mtn", "sound": "voice/05.mp3", "msg_id":"5" },
+			{ "file":"mtn/Miku_live2D_06.mtn", "sound": "voice/06.mp3", "msg_id":"6" },
+			{ "file":"mtn/Miku_live2D_07.mtn", "sound": "voice/07.mp3", "msg_id":"7" },
+			{ "file":"mtn/Miku_live2D_08.mtn", "sound": "voice/08.mp3", "msg_id":"8" },
+			{ "file":"mtn/Miku_live2D_09.mtn", "sound": "voice/09.mp3", "msg_id":"9" },
+			{ "file":"mtn/Miku_live2D_10.mtn", "sound": "voice/10.mp3", "msg_id":"10" },
+            { "file":"mtn/Miku_live2D_24.mtn", "sound": "voice/24.mp3", "msg_id":"24" }
+		],
+        "tap_body":
+		[
+			{ "file":"mtn/Miku_live2D_11.mtn", "sound": "voice/11.mp3", "msg_id":"11" },
+			{ "file":"mtn/Miku_live2D_12.mtn", "sound": "voice/12.mp3", "msg_id":"12" },
+			{ "file":"mtn/Miku_live2D_13.mtn", "sound": "voice/13.mp3", "msg_id":"13" },
+			{ "file":"mtn/Miku_live2D_14.mtn", "sound": "voice/14.mp3", "msg_id":"14" },
+			{ "file":"mtn/Miku_live2D_15.mtn", "sound": "voice/15.mp3", "msg_id":"15" },
+			{ "file":"mtn/Miku_live2D_16.mtn", "sound": "voice/16.mp3", "msg_id":"16" },
+			{ "file":"mtn/Miku_live2D_17.mtn", "sound": "voice/17.mp3", "msg_id":"17" },
+			{ "file":"mtn/Miku_live2D_18.mtn", "sound": "voice/18.mp3", "msg_id":"18" },
+			{ "file":"mtn/Miku_live2D_19.mtn", "sound": "voice/19.mp3", "msg_id":"19" },
+			{ "file":"mtn/Miku_live2D_20.mtn", "sound": "voice/20.mp3", "msg_id":"20" }
+		],		
+		"random":
+		[
+			{ "file":"mtn/Miku_live2D_27.mtn", "sound": "voice/27.mp3", "msg_id":"28" },
+			{ "file":"mtn/Miku_live2D_28.mtn", "sound": "voice/28.mp3", "msg_id":"29" },
+			{ "file":"mtn/Miku_live2D_29.mtn", "sound": "voice/29.mp3", "msg_id":"30" },
+			{ "file":"mtn/Miku_live2D_30.mtn", "sound": "voice/30.mp3", "msg_id":"31" },
+			{ "file":"mtn/Miku_live2D_31.mtn", "sound": "voice/31.mp3", "msg_id":"32" },
+			{ "file":"mtn/Miku_live2D_32.mtn", "sound": "voice/32.mp3", "msg_id":"33" },
+			{ "file":"mtn/Miku_live2D_33.mtn", "sound": "voice/33.mp3", "msg_id":"34" },
+			{ "file":"mtn/Miku_live2D_34.mtn", "sound": "voice/34.mp3", "msg_id":"35" }
+		],
+		"shake":
+		[
+			{ "file":"mtn/Miku_live2D_21.mtn", "sound": "voice/21.mp3", "msg_id":"21" },
+			{ "file":"mtn/Miku_live2D_22.mtn", "sound": "voice/22.mp3", "msg_id":"22" },
+			{ "file":"mtn/Miku_live2D_23.mtn", "sound": "voice/23.mp3", "msg_id":"23" },
+			{ "file":"mtn/Miku_live2D_24.mtn", "sound": "voice/24.mp3", "msg_id":"24" },
+			{ "file":"mtn/Miku_live2D_25.mtn", "sound": "voice/25.mp3", "msg_id":"25" }
+		],
+        "new_msg":
+		[
+			{ "file":"mtn/Miku_live2D_33.mtn", "sound": "voice/33.mp3" }
+		]
+	}
+}

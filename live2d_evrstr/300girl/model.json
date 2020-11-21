@@ -1,0 +1,69 @@
+{
+	"version":"Sample 1.0.0",
+	"model":"300girl.moc",
+	"textures":[
+		"300girl.1024/texture_00.png",
+		"300girl.1024/texture_01.png",
+		"300girl.1024/texture_02.png"
+	],
+	"layout": {
+        "height": 4,
+		"width": 4,
+		"center_x": 0,
+		"center_y": -0.28
+	},
+	"hit_areas":
+	[
+		{"name":"head", "id":"D_REF.HEAD"},
+		{"name":"chest", "id":"D_REF.CHEST"},
+		{"name":"belly", "id":"D_REF.BELLY"}
+	],
+	"motions":{
+		"idle":[
+			{"file":"motions/idle.mtn","fade_in":500,"fade_out":500}
+		],
+        "start":[
+			{"file":"motions/back_1.mtn","sound":"voice/back_1.mp3","fade_in":500,"fade_out":500},
+			{"file":"motions/back_2.mtn","sound":"voice/back_2.mp3","fade_in":500,"fade_out":500}
+		],
+        "tap_head":[
+			{"file":"motions/tap_head_01.mtn","sound":"voice/tap_head_1.mp3","fade_in":500,"fade_out":500},
+			{"file":"motions/tap_head_02.mtn","sound":"voice/tap_head_2.mp3","fade_in":500,"fade_out":500},
+            {"file":"motions/tsundere01.mtn","sound":"voice/tsundere_1.mp3","fade_in":500,"fade_out":500},
+			{"file":"motions/tsundere02.mtn","sound":"voice/tsundere_2.mp3","fade_in":500,"fade_out":500},
+            {"file":"motions/talk01.mtn","sound":"voice/idle_5.mp3","fade_in":500,"fade_out":500},
+            {"file":"motions/talk02.mtn","sound":"voice/idle_4.mp3","fade_in":500,"fade_out":500},
+            {"file":"motions/talk04.mtn","sound":"voice/idle_6.mp3","fade_in":500,"fade_out":500}
+		],
+		"tap_chest":[
+			{"file":"motions/tap_chest_01.mtn","sound":"voice/tap_chese_1.mp3","fade_in":500,"fade_out":500},
+			{"file":"motions/tap_chest_02.mtn","sound":"voice/tap_chese_2.mp3","fade_in":500,"fade_out":500},
+            {"file":"motions/tap_chest_02.mtn","sound":"voice/tap_chese_3.mp3","fade_in":500,"fade_out":500},
+            {"file":"motions/indifference.mtn","sound":"voice/indifference.mp3","fade_in":500,"fade_out":500},
+            {"file":"motions/angry.mtn","sound":"voice/angry.mp3","fade_in":500,"fade_out":500},
+            {"file":"motions/talk00.mtn","sound":"voice/idle_2.mp3","fade_in":500,"fade_out":500}
+		],        
+		"tap_belly":[
+			{"file":"motions/tap_belly_01.mtn","sound":"voice/tap_waist_1.mp3","fade_in":500,"fade_out":500},
+			{"file":"motions/tap_belly_02.mtn","sound":"voice/tap_waist_2.mp3","fade_in":500,"fade_out":500},
+            {"file":"motions/talk03.mtn","sound":"voice/idle_3.mp3","fade_in":500,"fade_out":500}
+		],        
+		"away":[
+			{"file":"motions/away_1.mtn","sound":"voice/away_1.mp3","fade_in":500,"fade_out":500}
+		],
+        "back":[
+			{"file":"motions/back_1.mtn","sound":"voice/back_1.mp3","fade_in":500,"fade_out":500},
+			{"file":"motions/back_2.mtn","sound":"voice/back_2.mp3","fade_in":500,"fade_out":500}
+		],
+        "new_msg":[
+            {"file":"motions/talk00.mtn","sound":"voice/mail_1.mp3","fade_in":500,"fade_out":500},
+            {"file":"motions/excitement.mtn","sound":"voice/mail_2.mp3","fade_in":500,"fade_out":500}
+        ],
+        "random":[
+            {"file":"motions/talk02.mtn","sound":"voice/idle_4.mp3","fade_in":500,"fade_out":500},
+            {"file":"motions/talk03.mtn","sound":"voice/idle_3.mp3","fade_in":500,"fade_out":500},
+            {"file":"motions/talk04.mtn","sound":"voice/idle_6.mp3","fade_in":500,"fade_out":500}
+        ]
+	},
+	"physics":"physics.json"
+}

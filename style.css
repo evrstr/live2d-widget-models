@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:link {
+    color: #000;
+}
+
+li {
+    list-style: none;
+}
+
+.clearfix:after,
+.clearfix:before {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+.w {
+    width: 1400px;
+    height: auto;
+    margin: 0 auto;
+}
+
+body {
+    background: url(https://cdn.jsdelivr.net/gh/evrstr/img/blog_evrstr/alice-moore-E--AUpYXbjM-unsplash.jpg) no-repeat;
+    /* 固定背景图片位置 */
+    background-attachment: fixed;
+    background-size: 100% auto;
+    z-index: -10;
+}
+
+.nav {
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 100%;
+    height: 60px;
+}
+
+#home {
+    float: left;
+    line-height: 60px;
+    font-size: 26px;
+    margin-left: 48px;
+    color: #000;
+}
+
+.nav ul {
+    float: right;
+    margin-right: 48px;
+}
+
+.nav ul li {
+    float: left;
+}
+
+.nav ul li a {
+    line-height: 60px;
+    font-size: 18px;
+    margin: 0 10px 0 10px;
+    color: #333;
+}
+
+.nav ul li a:hover {
+    color: #49B1F5;
+}
+
+#home:hover {
+    color: #49B1F5;
+}
+
+.content {
+    height: 360px;
+    width: 1290px;
+}
+
+.content .card {
+    float: left;
+    width: 250px;
+    height: 325px;
+    background-color: #fff;
+    margin: 72px 4px 12px 4px;
+    border-radius: 5px;
+}
+
+.content .card a img {
+    width: 250px;
+    height: 250px;
+}
+
+.content .card .item .item_title {
+    font-size: 24px;
+    width: 250px;
+    height: auto;
+    text-align: center;
+    margin: 0 4px;
+    font-weight: normal;
+}
+
+.content .card .item .item_tag span {
+    width: auto;
+    font-weight: 400;
+    height: 22px;
+    line-height: 22px;
+    float: left;
+    font-size: 0.8rem;
+    color: #fff;
+    margin: 10px 0 0 10px;
+    padding: 0 8px;
+    border-radius: 9px;
+    background-image: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%);
+}
+
+h2:hover {
+    cursor: pointer;
+}

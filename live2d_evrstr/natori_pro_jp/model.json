@@ -1,0 +1,28 @@
+{
+	"Version": 3,
+	"FileReferences": {
+		"Moc": "natori_pro_t03.moc3",
+		"Textures": [
+			"natori_pro_t03.4096/texture_00.png"
+		],
+		"Physics": "natori_pro_t03.physics3.json",
+		"DisplayInfo": "natori_pro_t03.cdi3.json"
+	},
+	"Groups": [
+		{
+			"Target": "Parameter",
+			"Name": "LipSync",
+			"Ids": [
+				"ParamMouthOpenY"
+			]
+		},
+		{
+			"Target": "Parameter",
+			"Name": "EyeBlink",
+			"Ids": [
+				"ParamEyeLOpen",
+				"ParamEyeROpen"
+			]
+		}
+	]
+}
