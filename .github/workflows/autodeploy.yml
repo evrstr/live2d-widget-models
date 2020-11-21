@@ -23,12 +23,16 @@ jobs:
         with:
           python-version: 3.7
 
-      - name: Update paper list
+      - name: 安装模块
+        run: |
+          pip install -r requirements.txt
+
+      - name: 生成json文件
         run: |
           export TZ='Asia/Shanghai'
           python build.py
 
-      - name: commit
+      - name: 暂存提交
         run: |
           git config --global user.name 'evrstr'
           git config --global user.email '429427989@qq.com'
@@ -36,5 +40,5 @@ jobs:
           git add .
           git commit -m "update" -a
 
-      - name: Push changes
+      - name: 推送
         uses: ad-m/github-push-action@master
