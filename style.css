@@ -23,11 +23,12 @@ body {
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: flex-start;
-    background: url(https://cdn.jsdelivr.net/gh/evrstr/img/blog_evrstr/alice-moore-E--AUpYXbjM-unsplash.jpg) no-repeat;
+    background-color: #ECECEC;
+    /* background: url(https://cdn.jsdelivr.net/gh/evrstr/img/blog_evrstr/alice-moore-E--AUpYXbjM-unsplash.jpg) no-repeat;
     /* 固定背景图片位置 */
     background-attachment: fixed;
     background-size: 100% auto;
-    z-index: -10;
+    */ z-index: -10;
 }
 
 .fixed {
