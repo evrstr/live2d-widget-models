@@ -73,6 +73,8 @@ var create_card = function(name, preview, json) {
     h2.onclick = function() {
         defaultConfig.model.jsonPath = "https://cdn.jsdelivr.net/gh/evrstr/live2d-widget-models/live2d_evrstr/" + name + "/model.json";
         L2Dwidget.init(defaultConfig);
+        var json_src = document.getElementById("json_src");
+        json_src.value = defaultConfig.model.jsonPath
     }
 
 }

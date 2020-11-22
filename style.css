@@ -206,3 +206,20 @@ button:hover {
     color: #ff4444;
     font-weight: 700;
 }
+
+#json_src {
+    width: 48em;
+    height: 2em;
+    margin-top: 1em;
+    line-height: 3.75em;
+    border: 0.16em solid #fff;
+    border-bottom: 0.08em solid rgb(172, 172, 172);
+    outline-style: none;
+    padding-left: 1em;
+    border-radius: 0.5em;
+    color: rgb(139, 139, 139);
+}
+
+#json_src:focus {
+    box-shadow: 0.1em 0.1em 0.2em rgb(158, 158, 158);
+}
