@@ -185,3 +185,24 @@ button:hover {
     width: 100%;
     margin-left: auto;
 }
+
+#uptime .foot {
+    display: flex;
+    justify-content: space-between;
+    line-height: 15px;
+    color: #999fa6;
+}
+
+#footer {
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.8;
+    color: #999fa6;
+    padding: 22px 0;
+    background-color: rgba(44, 29, 29, 0.1);
+}
+
+#footer a {
+    color: #ff4444;
+    font-weight: 700;
+}
