@@ -23,6 +23,7 @@ body {
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: flex-start;
+    position: relative;
     background-color: #ECECEC;
     /* background: url(https://cdn.jsdelivr.net/gh/evrstr/img/blog_evrstr/alice-moore-E--AUpYXbjM-unsplash.jpg) no-repeat;
     /* 固定背景图片位置 */
@@ -81,7 +82,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     width: auto;
-    margin: 3em 1em 0 1em;
+    margin: 4em 1em 0 1em;
 }
 
 .content .card {
@@ -136,4 +137,51 @@ body {
 
 h2:hover {
     cursor: pointer;
+}
+
+.control_fixed {
+    position: fixed;
+    top: 10%;
+    right: 0.25em;
+}
+
+#control {
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+button {
+    margin-top: 0.5em;
+    width: 1em;
+    height: 2em;
+    font-size: 1em;
+    font-weight: 700;
+    border: 0.16em solid rgb(157, 226, 247);
+    outline-style: none;
+    border-radius: 0.3em;
+    background-color: rgb(157, 226, 247);
+    color: #fff;
+}
+
+button:hover {
+    border: 0.16em solid rgb(17, 182, 233);
+    background-color: rgb(17, 182, 233);
+}
+
+.input {
+    width: 4em;
+    height: 1.25em;
+    line-height: 1.25em;
+    padding-left: 0.25em;
+    border: 0.16em solid #fff;
+    outline-style: none;
+    border-radius: 0.3em;
+}
+
+#submit {
+    width: 100%;
+    margin-left: auto;
 }

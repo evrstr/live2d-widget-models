@@ -1,6 +1,7 @@
 var defaultConfig = {
     model: {
-        jsonPath: "https://cdn.jsdelivr.net/gh/evrstr/live2d-widget-models/live2d_evrstr/aoba/model.json",
+        // jsonPath: "https://cdn.jsdelivr.net/gh/evrstr/live2d-widget-models/live2d_evrstr/aoba/model.json",
+        jsonPath: "https://cdn.jsdelivr.net/gh/evrstr/live2d-widget-models/live2d_evrstr/koharu/model.json",
         scale: 1,
     },
     display: {
@@ -143,7 +144,59 @@ var getdat = function() {
     window.onscroll = throttle(checkImgs);
 }
 
+
+function width_add() {
+    let add = document.getElementById("width_add");
+    let text = document.getElementById("width_text");
+    add.onclick = function() {
+        text.value = Number(text.value) + 10;
+    }
+}
+
+function width_del() {
+    let del = document.getElementById("width_del");
+    let text = document.getElementById("width_text");
+    del.onclick = function() {
+        text.value = Number(text.value) - 10;
+    }
+}
+
+function height_add() {
+    let add = document.getElementById("height_add");
+    let text = document.getElementById("height_text");
+    add.onclick = function() {
+        text.value = Number(text.value) + 10;
+    }
+}
+
+function height_del() {
+    let del = document.getElementById("height_del");
+    let text = document.getElementById("height_text");
+    del.onclick = function() {
+        text.value = Number(text.value) - 10;
+    }
+}
+
+function sub() {
+
+    let submit = document.getElementById("submit");
+    let width = document.getElementById("width_text");
+    let height = document.getElementById("height_text");
+    submit.onclick = function() {
+        defaultConfig.display.width = Number(width.value);
+        defaultConfig.display.height = Number(height.value);
+        L2Dwidget.init(defaultConfig);
+    }
+}
+
 getdat();
+
+width_add();
+width_del();
+height_add();
+height_del();
+sub();
+
 
 // L2Dwidget.init({
 //     "pluginRootPath": "live2dw/",
