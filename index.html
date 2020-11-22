@@ -15,14 +15,14 @@
 <body>
 
     <div class="nav fixed">
-        <a href="https://evrstr.cc" id="home" target="_blank">主页</a>
+        <a href="https://evrstr.cc" id="home" target="_blank">我的博客</a>
         <input id="json_src" type="text" placeholder="json地址" value="https://cdn.jsdelivr.net/gh/evrstr/live2d-widget-models/live2d_evrstr/koharu/model.json" onfocus="this.select();" οnmοuseοver="this.focus()">
         <ul>
             <li>
-                <a href="" target="_blank">我们</a>
+                <a href="" target="_blank">使用教程</a>
             </li>
             <li>
-                <a href="https://github.com/evrstr/live2d-widget-models" target="_blank">下载地址</a>
+                <a href="https://github.com/evrstr/live2d-widget-models" target="_blank">github</a>
             </li>
         </ul>
     </div>
@@ -41,8 +41,10 @@
     </div>
 
     <div class="control_fixed">
-        <span>设置预览宽高</span>
+
         <div id="control">
+            <span id="download_title">koharu</span>
+            <span>设置预览宽高</span>
             <div>
                 <button id="width_add">+</button>
                 <input id="width_text" class="input" type="text" placeholder="宽度" value="200">
@@ -53,7 +55,7 @@
                 <input id="height_text" class="input" type="text" placeholder="高度" value="400">
                 <button id="height_del">-</button>
             </div>
-            <button id="submit">确定</button>
+            <button id="download">下载</button>
         </div>
     </div>
 

@@ -73,7 +73,9 @@ var create_card = function(name, preview, json) {
     h2.onclick = function() {
         defaultConfig.model.jsonPath = "https://cdn.jsdelivr.net/gh/evrstr/live2d-widget-models/live2d_evrstr/" + name + "/model.json";
         L2Dwidget.init(defaultConfig);
-        var json_src = document.getElementById("json_src");
+        let json_src = document.getElementById("json_src");
+        let download_title = document.getElementById("download_title");
+        download_title.innerText = name;
         json_src.value = defaultConfig.model.jsonPath
     }
 
@@ -86,7 +88,7 @@ function isInSight(el) {
     const clientHeight = window.innerHeight;
     //如果只考虑向下滚动加载
     //const clientWidth = window.innerWeight;
-    return bound.top <= clientHeight + 70;
+    return bound.top <= clientHeight + 100;
 }
 
 function checkImgs() {
@@ -152,6 +154,7 @@ function width_add() {
     let text = document.getElementById("width_text");
     add.onclick = function() {
         text.value = Number(text.value) + 10;
+        sub2();
     }
 }
 
@@ -160,6 +163,7 @@ function width_del() {
     let text = document.getElementById("width_text");
     del.onclick = function() {
         text.value = Number(text.value) - 10;
+        sub2();
     }
 }
 
@@ -168,6 +172,7 @@ function height_add() {
     let text = document.getElementById("height_text");
     add.onclick = function() {
         text.value = Number(text.value) + 10;
+        sub2();
     }
 }
 
@@ -176,28 +181,54 @@ function height_del() {
     let text = document.getElementById("height_text");
     del.onclick = function() {
         text.value = Number(text.value) - 10;
+        sub2();
     }
 }
 
-function sub() {
-
-    let submit = document.getElementById("submit");
-    let width = document.getElementById("width_text");
-    let height = document.getElementById("height_text");
-    submit.onclick = function() {
-        defaultConfig.display.width = Number(width.value);
-        defaultConfig.display.height = Number(height.value);
+function lost_focus() {
+    let width_text = document.getElementById("width_text");
+    let height_text = document.getElementById("height_text");
+    width_text.onblur = function() {
+        defaultConfig.display.width = Number(width_text.value);
+        defaultConfig.display.height = Number(height_text.value);
+        L2Dwidget.init(defaultConfig);
+    }
+    height_text.onblur = function() {
+        defaultConfig.display.width = Number(width_text.value);
+        defaultConfig.display.height = Number(height_text.value);
         L2Dwidget.init(defaultConfig);
     }
 }
 
-getdat();
+function sub2() {
 
+    let submit = document.getElementById("submit");
+    let width = document.getElementById("width_text");
+    let height = document.getElementById("height_text");
+    defaultConfig.display.width = Number(width.value);
+    defaultConfig.display.height = Number(height.value);
+    L2Dwidget.init(defaultConfig);
+
+}
+
+
+function download() {
+    let download = document.getElementById("download");
+    let download_title = document.getElementById("download_title");
+    download.onclick = function() {
+        let url = "https://github.com/evrstr/live2d-widget-models/tree/master/live2d_evrstr/" + download_title.innerText;
+        window.open(url);
+        console.log(url);
+    }
+}
+
+getdat();
 width_add();
 width_del();
 height_add();
 height_del();
-sub();
+lost_focus();
+download();
 
 
 // L2Dwidget.init({

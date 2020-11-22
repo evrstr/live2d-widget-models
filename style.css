@@ -175,6 +175,18 @@ h2:hover {
     right: 0.25em;
 }
 
+.control_fixed span {
+    font-size: 0.75em;
+    color: rebeccapurple;
+    text-align: center;
+}
+
+#download_title {
+    font-size: 1em;
+    color: red;
+    margin: 0.5em 0;
+}
+
 #control {
     display: -webkit-flex;
     display: flex;
@@ -211,7 +223,7 @@ button:hover {
     border-radius: 0.3em;
 }
 
-#submit {
+#download {
     width: 100%;
     margin-left: auto;
 }
