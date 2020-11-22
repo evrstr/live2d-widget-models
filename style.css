@@ -1,3 +1,33 @@
+::-webkit-scrollbar {
+    width: 0.6em;
+    height: 12em;
+    background-color: #49B1F5;
+}
+
+
+/*定义滚动条轨道 内阴影+圆角*/
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #FFFFFF;
+}
+
+
+/*定义滑块 内阴影+圆角*/
+
+::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: #49B1F5;
+}
+
+
+/*滑块效果*/
+
+::-webkit-scrollbar-thumb:hover {
+    -webkit-box-shadow: inset 0 0 5px #49B1F5;
+    background: #49B1F5;
+}
+
 * {
     margin: 0;
     padding: 0;
